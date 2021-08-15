@@ -13,6 +13,7 @@ Symbol_table = symbol_table.symbols(Lines)
 
 l = list(errors.inputfile(Lines,Symbol_table))
 
+lineNo=errors.lin
 
 for line in Lines :
     
@@ -27,7 +28,7 @@ for line in Lines :
         continue
 
     elif len(l)!=0 and l[0] == True:
-        print("ERROR : " + l[1])
+        print("ERROR in Line no. "+str(lineNo)+  ": "  + l[1])
         break
 
     

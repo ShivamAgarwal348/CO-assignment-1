@@ -50,6 +50,6 @@ def Input():
             i+=1
             if (len(x1)>1):
                 Lineno+=1
-                print("ERROR in line no. "+ str(Lineno -1) +" : halt statement is not at the last line")
+                print("ERROR in line no. "+ str(Lineno -1) +" : halt statement is in the middle")
                 exit(1)
     return

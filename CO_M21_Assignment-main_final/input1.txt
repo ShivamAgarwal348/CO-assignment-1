@@ -1,0 +1,4 @@
+var x 
+var y 
+mov R2 R9 
+hlt 

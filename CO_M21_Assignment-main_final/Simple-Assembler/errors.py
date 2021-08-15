@@ -1,8 +1,11 @@
 import opcode_table
 
+global lin
+lin=0
+
 def errors(s):
     if(s=="regE"):
-        return "Typos in instruction name or register name"
+        return "Typos in instruction name or register name or something other than register has been used"
 
     elif(s=="undefVarE"):
         return "Use of undefined variables"
@@ -32,7 +35,9 @@ def errors(s):
 # main function for checking S[0], if it's a label or not
 
 def inputfile(Lines,Symbol_table):
+    global lin
     for line in Lines:
+        lin+=1
         errorflag = identifyE(line,Symbol_table)
         if (errorflag[0] == True):
             return errorflag
