@@ -29,7 +29,7 @@ def add(value1,value2):
     value3 = bin(value3)[2:]
     l=16-len(value3)
     if a:
-        value3 = '1111111111111111'
+        value3 = value3[-16:]
     else:
         for i in range(1,l+1):
             value3 = "0" + value3
@@ -60,7 +60,7 @@ def mul(value1,value2):
     value3 = bin(value3)[2:]
     l=16-len(value3)
     if a:
-        value3 = '1111111111111111'
+        value3 = value3[-16:]
     else:
         for i in range(1,l+1):
             value3 = "0" + value3
